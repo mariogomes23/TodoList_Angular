@@ -40,4 +40,21 @@ export class TodoListComponent implements OnInit,DoCheck {
     this.taskList.push({task:event,checked:false})
   }
 
+  public validationInput(event:string,index:number)
+  {
+    if(!event.length)
+    {
+      const confirmar = window.confirm("Task esta vazia,seja apagar ?")
+
+
+    if(confirmar)
+    { 
+      this.deleteItemTaskList(index)
+
+    }
+    }
+
+
+  }
+
 }
